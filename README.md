@@ -12,6 +12,7 @@
 ## Website
 
 Click on the following website to open Password Generator web page.
+
 https://raedaltaki.github.io/password-generator/
 
 

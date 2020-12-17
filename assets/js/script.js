@@ -1,12 +1,12 @@
 // Function for password length
 var passLengthFun = function()
 {
-  var length = window.prompt("Choose Password Length:\nLength should be a number at least 8 and no more than 128");
+  var length = window.prompt("Choose Password Length:\nLength should be a number from 8 to 128");
   length = parseInt(length); // make it integer nad NaN if not number
 
   if(!length || length < 8 || length > 128) //check for not correct input if NaN or less than 8 or more than 128 characters
   {
-    window.alert("Length should be a number at least 8 and no more than 128");
+    window.alert("Length should be a number from 8 to 128");
     return passLengthFun();  //recursive
   }
 
@@ -17,10 +17,10 @@ var passLengthFun = function()
 var passCharsFun = function ()
 {
   var validChars = ""; //variable for valid character pool
-  var lowercase = window.confirm("Do you want the password to include lowercase ?");
-  var uppercase = window.confirm("Do you want the password to include uppercase ?");
-  var numeric = window.confirm("Do you want the password to include numeric ?");
-  var specialChar = window.confirm("Do you want the password to include special characters ?");
+  var lowercase = window.confirm("Do you want the password to include lowercase characters?");
+  var uppercase = window.confirm("Do you want the password to include uppercase characters?");
+  var numeric = window.confirm("Do you want the password to include numeric characters?");
+  var specialChar = window.confirm("Do you want the password to include special characters?");
   
   if(!(lowercase || uppercase || numeric || specialChar)) //check if all values are false
   {
@@ -78,6 +78,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
