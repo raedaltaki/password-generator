@@ -1,12 +1,12 @@
 // Function for password length
 var passLengthFun = function()
 {
-  var length = window.prompt("Choose Password Length:\nLength should be a number that at least 8 characters and no more than 128 characters");
+  var length = window.prompt("Choose Password Length:\nLength should be a number at least 8 and no more than 128");
   length = parseInt(length); // make it integer nad NaN if not number
 
   if(!length || length < 8 || length > 128) //check for not correct input if NaN or less than 8 or more than 128 characters
   {
-    window.alert("Length should be a number that at least 8 characters and no more than 128 characters");
+    window.alert("Length should be a number at least 8 and no more than 128");
     return passLengthFun();  //recursive
   }
 
